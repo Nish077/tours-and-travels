@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Internal CSS for the form -->
+    <style>
+       
+        .booking-form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            margin: 50px auto;
+        }
+        .booking-form h2 {
+            margin-bottom: 20px;
+        }
+        .booking-form label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .booking-form input, .booking-form select, .booking-form textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .booking-form input[type="submit"] {
+            background-color: #040b12;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .booking-form input[type="submit"]:hover {
+            background-color: #060d13;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Travel & Tour Website</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="package.html">Packages</a></li>
+                <li><a href="book.html">Book Now</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="register.html">Login</a></li>
+                <li><button onclick="startVoiceRecognition()"><img width="18" height="15" src="./assets/mic.png" alt=""></button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="booking-form">
+        <h2>Book Your Tour</h2>
+        <form action="book.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+        
+            <label for="tour">Select Package:</label>
+            <select id="tour" name="tour" required>
+                <option value="beach">Beach Escape</option>
+                <option value="mountain">Mountain Adventure</option>
+                <option value="city">City Exploration</option>
+                <option value="safari">Safari adventure</option>
+            </select>
+        
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" name="date" required>
+        
+            <label for="message">Special Requests:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+        
+            <input type="submit" value="Book Now">
+        </form>
+        
+    </section>
+    <footer>
+        <p>&copy; 2024 Travel & Tour Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel & Tour - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script> <!-- Include Annyang -->
+    <script src="./scripts/index.js" defer></script>
+    <style>
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Travel & Tour Website</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="package.html">Packages</a></li>
+                <li><a href="book.html">Book Now</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="register.html">Login</a></li>
+                <li><button onclick="startVoiceRecognition()"><img width="18" height="15" src="./assets/mic.png" alt=""></button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <h2>Collect Moments not things</h2>
+        <p>Explore the world with our exclusive travel packages.</p>
+
+        <div class="ButtonForBlind">
+            <span>Click on the button to navigate using voice command</span>
+            <button style="margin-top: 50px;" onclick="startVoiceRecognition()">
+                <img width="25" src="./assets/mic.png" alt="">
+            </button>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Travel & Tour Website</p>
+    </footer>
+</body>
+</html>
